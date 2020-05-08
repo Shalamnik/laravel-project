@@ -18,5 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/orders', function () {
-    return view('orders');
+    $users = [
+        ['name' => 'sergey', 'age' => 23],
+        ['name' => 'vlad', 'age' => 22],
+        ['name' => 'misha', 'age' => 22]
+    ];
+    return view('orders', ['users' => $users]);
 });
