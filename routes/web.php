@@ -17,20 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/orders', function () {
-    $users = [
-        ['name' => 'sergey', 'age' => 23],
-        ['name' => 'vlad', 'age' => 22],
-        ['name' => 'misha', 'age' => 22]
-    ];
+Route::get('/orders', 'OrderController@index');
 
-    return view('orders', [
-        'users' => $users,
-        'name' => request('name'),
-        'age' => request('age')
-        ]);
-});
-
-Route::get('/orders/{id}', function ($id) {
-    return view('details', ['id' => $id]);
-});
+Route::get('/orders/{id}', 'OrderController@show');
