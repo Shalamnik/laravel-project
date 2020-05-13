@@ -7,9 +7,14 @@
             Orders list
         </div>
 
-        <h3>Customer name: {{ $name }}</h3>
-        <h4>Customer age: {{ $age }}</h4>
-
+        @foreach ($orders as $order)
+            <div>
+                {{ $order->type }} - {{ $order->stack }}
+                <p>Name: {{ $order->customer_name }}</p>
+                <p>Price: {{ $order->price }}</p>
+            </div>
+            <hr>
+        @endforeach
     </div>
 </div>
 @endsection
