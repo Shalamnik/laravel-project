@@ -20,6 +20,12 @@ class OrderController extends Controller
 
     public function show($id)
     {
-        return view('orders.show', ['id' => $id]);
+        $order = Order::findOrFail($id);
+        return view('orders.show', ['order' => $order]);
+    }
+
+    public function create()
+    {
+        return view('orders.create');
     }
 }
