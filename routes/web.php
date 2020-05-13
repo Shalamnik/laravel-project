@@ -18,5 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/orders', 'OrderController@index');
-
 Route::get('/orders/{id}', 'OrderController@show');

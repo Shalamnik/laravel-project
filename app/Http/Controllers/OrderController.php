@@ -13,13 +13,13 @@ class OrderController extends Controller
         // $orders = Order::orderBy('price', 'desc')->get();
         // $orders = Order::where('type', 'blog')->get();
 
-        return view('orders', [
+        return view('orders.index', [
             'orders' => $orders,
         ]);
     }
 
     public function show($id)
     {
-        return view('details', ['id' => $id]);
+        return view('orders.show', ['id' => $id]);
     }
 }
