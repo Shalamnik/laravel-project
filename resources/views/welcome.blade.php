@@ -22,6 +22,7 @@
             Site of orders <br>
             Made on Laravel
         </div>
+        <a href="/orders/create">Order a new site</a>
     </div>
 </div>
 @endsection
