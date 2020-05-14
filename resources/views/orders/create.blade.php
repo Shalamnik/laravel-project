@@ -4,6 +4,7 @@
 <div class="wrapper create-order">
     <h1>Create a new order</h1>
     <form action="/orders" method="POST">
+        @csrf
         <label for="name">Your name</label>
         <input type="text" id="name" name="name">
         

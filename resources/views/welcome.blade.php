@@ -22,6 +22,7 @@
             Site of orders <br>
             Made on Laravel
         </div>
+        <p class="message">{{ session('message') }}</p>
         <a href="/orders/create">Order a new site</a>
     </div>
 </div>

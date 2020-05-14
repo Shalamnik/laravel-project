@@ -28,4 +28,20 @@ class OrderController extends Controller
     {
         return view('orders.create');
     }
+
+    public function store()
+    {
+        $order = new Order();
+
+        $order->customer_name = request('name');
+        $order->type = request('type');
+        $order->stack = request('stack');
+        $order->price = 40000;
+
+        $order->save();
+
+        error_log($order);
+
+        return redirect('/')->with('message', 'Thanks for your order');
+    }
 }

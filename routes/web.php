@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/orders', 'OrderController@index');
 Route::get('/orders/create', 'OrderController@create');
 Route::get('/orders/{id}', 'OrderController@show');
+Route::post('/orders', 'OrderController@store');
