@@ -43,4 +43,12 @@ class OrderController extends Controller
 
         return redirect('/')->with('message', 'Thanks for your order');
     }
+
+    public function destroy($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->delete();
+
+        return redirect('/orders');
+    }
 }

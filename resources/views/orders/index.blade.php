@@ -15,6 +15,8 @@
             </div>
             <hr>
         @endforeach
+        <br>
+        <a href="/">Go to index page</a>
     </div>
 </div>
 @endsection

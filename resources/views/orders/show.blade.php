@@ -14,8 +14,9 @@
             </li>
         @endforeach
     </ul>
-    <form action="/orders/{{ $order->id }}" method="DELETE">
+    <form action="/orders/{{ $order->id }}" method="POST">
         @csrf
+        @method('DELETE');
         <input type="submit" value="Complete the order">
     </form> <br>
 </div>

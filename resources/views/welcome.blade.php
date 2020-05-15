@@ -23,7 +23,9 @@
             Made on Laravel
         </div>
         <p class="message">{{ session('message') }}</p>
-        <a href="/orders/create">Order a new site</a>
+        <a href="/orders/create">Order a new site</a> <br>
+        <a href="/orders">Check orders</a>
+
     </div>
 </div>
 @endsection
