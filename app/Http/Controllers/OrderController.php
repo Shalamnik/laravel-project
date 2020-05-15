@@ -36,11 +36,10 @@ class OrderController extends Controller
         $order->customer_name = request('name');
         $order->type = request('type');
         $order->stack = request('stack');
-        $order->price = 40000;
+        $order->price = request('price');
+        $order->comment = request('comment');
 
         $order->save();
-
-        error_log($order);
 
         return redirect('/')->with('message', 'Thanks for your order');
     }

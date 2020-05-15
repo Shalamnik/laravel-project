@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('type');
             $table->string('stack');
             $table->string('customer_name');
+            $table->json('comment');
         });
     }
 
