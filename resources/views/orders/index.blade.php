@@ -1,22 +1,13 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            Orders list
-        </div>
-
-        @foreach ($orders as $order)
-            <div>
-                {{ $order->type }} - {{ $order->stack }}
-                <p>Name: {{ $order->customer_name }}</p>
-                <p>Price: {{ $order->price }}</p>
-            </div>
-            <hr>
-        @endforeach
-        <br>
-        <a href="/">Go to index page</a>
-    </div>
-</div>
+<div class="wrapper order-index">
+    <h1>List of Orders</h1>
+    @foreach($orders as $order)
+      <div class="order-item">
+        <h4><a href="/orders/{{ $order->id }}">{{ $order->type }}</a></h4>
+      </div>
+    @endforeach
+  
+  </div>
 @endsection

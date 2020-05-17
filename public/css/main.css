@@ -1,63 +1,166 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+html img,
+body img {
+  border-radius: 50%;
 }
 
 .full-height {
-    height: 100vh;
+  height: 100vh;
 }
 
 .flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .position-ref {
-    position: relative;
+  position: relative;
 }
 
 .top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+  position: absolute;
+  right: 10px;
+  top: 18px;
 }
 
 .content {
-    text-align: center;
+  text-align: center;
 }
 
-.title {
-    font-size: 50px;
-    text-transform: uppercase;
-    border-bottom: 2px solid;
-    padding: 12px 0;
-}
-
-.links>a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .m-b-md {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 footer {
-    background: #eee;
-    padding: 20px;
-    text-align: center;
+  background: #eee;
+  padding: 20px;
+  text-align: center;
 }
 
-img {
-    border-radius: 50%;
+.title {
+  font-size: 50px;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  padding: 12px 0;
+  color: #5e2195;
 }
+
+.wrapper {
+  max-width: 1140px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+/* create pizza form */
+
+.create-order {
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+.create-order fieldset {
+  border: none;
+}
+
+.create-order label,
+.create-order select {
+  display: block;
+}
+
+.create-order label {
+  margin-top: 30px;
+}
+
+.create-order select {
+  padding: 8px;
+  width: 200px;
+}
+
+.create-order input[type=checkbox] {
+  margin: 10px;
+}
+
+.create-order input[type=submit] {
+  background: #5e2195;
+  padding: 8px 20px;
+  color: #fff;
+  border: 0;
+  margin-top: 20px;
+}
+
+/* pizza details page */
+
+.order-work {
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+.order-work p {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.order-work button {
+  background: #5e2195;
+  padding: 8px 20px;
+  color: #fff;
+  border: 0;
+  margin-top: 20px;
+}
+
+a.back {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #5e2195;
+  margin-bottom: 20px;
+}
+
+/* pizza index page */
+
+.order-index h1 {
+  margin-bottom: 40px;
+}
+
+.order-index .order-item {
+  margin: 10px 0;
+  padding: 12px;
+  background: #f4f4f4;
+}
+
+.order-index .order-item img {
+  width: 60px;
+  display: inline-block;
+}
+
+.order-index .order-item h4 {
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.order-index .order-item h4 a {
+  color: #777;
+  text-decoration: none !important;
+}
+
