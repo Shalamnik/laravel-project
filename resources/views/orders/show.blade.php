@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="wrapper order-work">
@@ -14,7 +14,7 @@
             </li>
         @endforeach
     </ul>
-    <form action="/orders/{{ $order->id }}" method="POST">
+<form action="{{ route('orders.destroy', $order->id)}}" method="POST">
         @csrf
         @method('DELETE');
         <input type="submit" value="Complete the order">

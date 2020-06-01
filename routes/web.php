@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/orders', 'OrderController@index');
-Route::get('/orders/create', 'OrderController@create');
-Route::get('/orders/{id}', 'OrderController@show');
-Route::post('/orders', 'OrderController@store');
-Route::delete('orders/{id}', 'OrderController@destroy');
+Route::get('/orders', 'OrderController@index')->name('orders.index');
+Route::get('/orders/create', 'OrderController@create')->name('orders.create');
+Route::get('/orders/{id}', 'OrderController@show')->name('orders.show');
+Route::post('/orders', 'OrderController@store')->name('orders.store');
+Route::delete('orders/{id}', 'OrderController@destroy')->name('orders.destroy');
 
-Auth::routes();
+Auth::routes([
+    'register' => false
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');

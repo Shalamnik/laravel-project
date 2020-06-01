@@ -7,6 +7,11 @@ use App\Order;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['store, show']);
+    }
+
     public function index()
     {
         $orders = Order::all();
